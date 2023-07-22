@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bell MT;
+}
+
+
+body {
+    background: url(img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+a {
+    font-size: 43px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.menu-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background: radial-gradient(blue,green,red);
+    padding: 25px;
+}
+
+
+a:hover {
+    color: orange;
+}
+
+
+
+.menu-bar ul li:hover {
+    background: radial-gradient(blue,green,red);
+}
+
+
+.sub-menu {
+    display: none;
+}
+
+
+
+.menu-bar ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 0px;
+}
+
+
+
+.menu-bar ul li:hover .sub-menu ul {
+    display: block;
+    margin: 0px;
+}
+
+
+
+.menu-bar ul li:hover .sub-menu ul li {
+    padding: 9px;
+    text-align: left;
+    border-bottom: 3px dotted grey;
+    background: transparent;
+}
+
+
+.menu-bar ul li:hover .sub-menu ul li:last-child {
+    border-bottom: none;
+}
+
+
+.sub2 {
+    display: none;
+}
+
+
+
+.hover-me:hover .sub2 {
+    display: block;
+    position: absolute;
+    margin-left: 105px;
+}
+
+
+
+@media screen and (max-width: 360px) {
+    
+    .menu-bar ul {
+        flex-direction: column;
+        background-size: contain;
+        flex-wrap: wrap;
+        height: 600px;
+    }
+
+}
